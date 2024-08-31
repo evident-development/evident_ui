@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "allowUmdGlobalAccess": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "react": ["./node_modules/react"],
+      "react-dom": ["./node_modules/react-dom"],
+      "@/*": ["src/*"]
+    },
+    "jsx": "react-jsx"
+  },
+
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"]
+}

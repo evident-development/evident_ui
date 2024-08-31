@@ -1,0 +1,67 @@
+{
+  "name": "evident-ui-components",
+  "version": "1.3.0",
+  "description": "\"ui-kit\"",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdHovhannis/evident-ui.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "webpack",
+    "react"
+  ],
+  "author": "Edgar Hovhannisyan <edhovhannis@gmail.com or ed.hovhannis1992@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdHovhannis/evident-ui/issues"
+  },
+  "homepage": "https://github.com/EdHovhannis/evident-ui#readme",
+  "devDependencies": {
+    "@types/node": "20.10.7",
+    "@types/react": "18.2.47",
+    "@types/react-copy-to-clipboard": "5.0.7",
+    "@types/react-dom": "18.2.18",
+    "@types/react-syntax-highlighter": "15.5.13",
+    "@types/uuid": "9.0.7",
+    "@types/webpack": "5.28.5",
+    "@types/webpack-dev-server": "4.7.2",
+    "css-loader": "6.8.1",
+    "html-webpack-plugin": "5.6.0",
+    "style-loader": "3.3.3",
+    "ts-loader": "9.5.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3",
+    "webpack-cli": "5.1.4",
+    "webpack-merge": "5.10.0"
+  },
+  "prepublish": "tsc",
+  "dependencies": {
+    "@reduxjs/toolkit": "2.2.0",
+    "classnames": "2.5.1",
+    "html-react-parser": "5.1.9",
+    "react": "18",
+    "react-copy-to-clipboard": "5.1.0",
+    "react-dom": "18",
+    "react-hot-toast": "2.4.1",
+    "react-redux": "9.1.0",
+    "react-router-dom": "6.21.2",
+    "react-syntax-highlighter": "15.5.0",
+    "styled-components": "6.1.8",
+    "uuid": "9.0.1"
+  },
+  "peerDependencies": {
+    "react": "18",
+    "react-dom": "18"
+  }
+}
