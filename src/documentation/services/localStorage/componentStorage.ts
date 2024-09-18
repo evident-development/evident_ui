@@ -124,10 +124,10 @@ const ComponentsData: IComponentsData = {
           id: "gjpQTR",
         },
       ],
-      code: `<PlainButton
+      code: `<Button
   id="plain_button_textonly"
   size="big"
-  label="PlainButton"
+  label="Button"
   look="textonly"
   kind="default"
 />`,

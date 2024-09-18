@@ -1,2 +1,2 @@
-export * from './PlainButton';
-export * from './types';
+export * from "./Button";
+export * from "./types";

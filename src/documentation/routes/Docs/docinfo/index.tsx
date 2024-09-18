@@ -1,6 +1,6 @@
 import { ExampleSections, DocInfoW } from "./style";
 import { ComponentW } from "./style";
-import { PlainButton } from "@/ui-kit";
+import { Button } from "@/ui-kit";
 import { PlainTable } from "@/ui-kit";
 import { useAppSelector } from "@/documentation/actions/redux";
 import { getComponentsInfo } from "@/documentation/services";
@@ -18,59 +18,59 @@ export const DocInfo = () => {
         return (
           <ComponentW key={item.example}>
             <ExampleSections $flex>
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="default"
               />
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="success"
               />
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="warning"
               />
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="danger"
               />
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="disable"
               />
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="transparent"
               />
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="filled"
               />
-              <PlainButton
+              <Button
                 id="plain_button_withborder"
                 size="big"
-                label="PlainButton"
+                label="Button"
                 look="withborder"
                 kind="unfilled"
               />
