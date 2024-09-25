@@ -7,6 +7,8 @@ import {
   TopbarLink,
   TopbarAuthW,
   TopbarSearch,
+  TobparSignin,
+  TobparSignup,
 } from "./style";
 
 const defaultItems: NavItem[] = [
@@ -25,13 +27,19 @@ export const Topbar: FC<ITopbarProps> = (props) => {
     isSearchPanel,
     searchPlaceHolder,
     onSearch,
+    linksColor,
+    onLogo,
   } = props;
   return (
     <TopbarW $bgColor={bgColor}>
-      <TopbarLogoW>{logo}</TopbarLogoW>
+      <TopbarLogoW onClick={onLogo}>{logo}</TopbarLogoW>
       <TopbarLinksW>
         {(navitems || defaultItems).map((item, i) => {
-          return <TopbarLink key={i}>{item.title}</TopbarLink>;
+          return (
+            <TopbarLink key={i} $linksColor={linksColor} onClick={item.onClick}>
+              {item.title}
+            </TopbarLink>
+          );
         })}
       </TopbarLinksW>
 
@@ -41,8 +49,8 @@ export const Topbar: FC<ITopbarProps> = (props) => {
           placeholder={searchPlaceHolder || "type to search"}
           onChange={onSearch}
         />
-        <div onClick={onSignin}>Sign in</div>
-        <div onClick={onSignup}>Sign up</div>
+        <TobparSignin onClick={onSignin}>Sign in</TobparSignin>
+        <TobparSignup onClick={onSignup}>Sign up</TobparSignup>
       </TopbarAuthW>
     </TopbarW>
   );

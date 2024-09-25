@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { NavBar } from "@/ui-kit/Navigation";
+import { Topbar } from "@/ui-kit/Navigation";
 import { HeaderW } from "./style/HeaderW";
+import { title } from "process";
 
 export const TopBar = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ export const TopBar = () => {
 
   return (
     <HeaderW $gridArea={"topbar"}>
-      <NavBar navItems={navItems} />
+      <Topbar navitems={navItems} />
     </HeaderW>
   );
 };

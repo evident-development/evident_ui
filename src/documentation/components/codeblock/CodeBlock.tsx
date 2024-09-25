@@ -22,7 +22,7 @@ export const CodeBlock: FC<CodeBlockProps> = (props) => {
     <CodeBlockW>
       <SyntaxHighlighter
         showLineNumbers
-        customStyle={{ fontSize: "16px" }}
+        customStyle={{ fontSize: "16px", borderRadius: "6px", padding: "2px" }}
         style={vs}
       >
         {codeContent}

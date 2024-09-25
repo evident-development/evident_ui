@@ -14,12 +14,18 @@ export const TopbarW = styled.nav<ITopbarW>`
   color: #ffffff;
   position: sticky;
   top: 0px;
+  z-index: 5;
 `;
 
 export const TopbarLogoW = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const TopbarLinksW = styled.ul`
@@ -30,7 +36,15 @@ export const TopbarLinksW = styled.ul`
   padding: 0;
   margin: 0;
 `;
-export const TopbarLink = styled.li``;
+
+export const TopbarLink = styled.li<{ $linksColor?: string }>`
+  color: ${({ $linksColor }) => $linksColor || "#ffffff"};
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
 
 export interface ITopbarAuthWProps {
   $isSignPanel: boolean;
@@ -39,6 +53,26 @@ export const TopbarAuthW = styled.div<ITopbarAuthWProps>`
   display: ${({ $isSignPanel }) => ($isSignPanel ? "flex" : "none")};
   align-items: center;
   gap: 8px;
+  user-select: none;
+`;
+
+export const TobparSignin = styled.div`
+  user-select: none;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+`;
+export const TobparSignup = styled.div`
+  background-color: #013480;
+  border: 1px solid transparent;
+  padding: 4px;
+  border-radius: 6px;
+  user-select: none;
+  &:hover {
+    border: 1px solid #dddddd;
+    cursor: pointer;
+  }
 `;
 
 interface ITopbarSearchProps {

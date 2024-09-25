@@ -1,5 +1,6 @@
 export enum EComponentsGroupId {
-  Buttons = 'buttons',
-  Inputs = 'inputs',
-  Cards = 'cards',
+  Buttons = "buttons",
+  Inputs = "inputs",
+  Cards = "cards",
+  Navigation = "navigation",
 }
