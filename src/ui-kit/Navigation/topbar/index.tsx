@@ -69,7 +69,6 @@ export const Topbar: FC<ITopbarProps> = (props) => {
           return (
             <TopbarLink
               key={i}
-              $linksColor={linksColor}
               onClick={() => setActiveLink(item.onClick, item.route, i)}
               $isActive={item.isActive}
             >

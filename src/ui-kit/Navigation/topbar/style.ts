@@ -10,7 +10,7 @@ export const TopbarW = styled.nav<ITopbarW>`
   justify-content: space-around;
   height: 64px;
   width: 100%;
-  background-color: ${({ $bgColor }) => $bgColor || "#367EDD"};
+  background-color: ${({ $bgColor }) => $bgColor || "#173f80"};
   color: #ffffff;
   position: sticky;
   top: 0px;
@@ -20,7 +20,7 @@ export const TopbarW = styled.nav<ITopbarW>`
 export const TopbarLogoW = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   cursor: pointer;
   user-select: none;
   &:hover {
@@ -38,12 +38,10 @@ export const TopbarLinksW = styled.ul`
 `;
 
 interface ITopbarLink {
-  $linksColor?: string;
   $isActive: boolean;
 }
 export const TopbarLink = styled.li<ITopbarLink>`
-  color: ${({ $linksColor }) => $linksColor || "#ffffff"};
-  font-weight: ${({ $isActive }) => ($isActive ? "700" : "unset")};
+  color: ${({ $isActive }) => ($isActive ? "#ffffff" : "#d7dade")};
   cursor: pointer;
   user-select: none;
   &:hover {
