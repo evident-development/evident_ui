@@ -84,6 +84,7 @@ interface ITopbarSearchProps {
   $isSearchPanel: boolean;
 }
 export const TopbarSearch = styled.input<ITopbarSearchProps>`
+  display: ${({ $isSearchPanel }) => ($isSearchPanel ? "block" : "none")};
   border: none;
   border-radius: 4px;
   outline: none;
