@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { ITopbarProps, NavItem } from "./types/interface";
 import {
   TopbarW,
@@ -12,9 +12,24 @@ import {
 } from "./style";
 
 const defaultItems: NavItem[] = [
-  { title: "Main", onClick: () => {} },
-  { title: "About", onClick: () => {} },
-  { title: "Content", onClick: () => {} },
+  {
+    title: "Main",
+    onClick: (p) => {
+      console.log(p);
+    },
+  },
+  {
+    title: "About",
+    onClick: (p) => {
+      console.log(p);
+    },
+  },
+  {
+    title: "Content",
+    onClick: (p) => {
+      console.log(p);
+    },
+  },
 ];
 export const Topbar: FC<ITopbarProps> = (props) => {
   const {
@@ -30,13 +45,34 @@ export const Topbar: FC<ITopbarProps> = (props) => {
     linksColor,
     onLogo,
   } = props;
+
+  const [navItems, setNavItems] = useState(() => navitems);
+
+  const setActiveLink = (callback: Function, route: string, i: number) => {
+    callback(route);
+    const navLinksActive = navitems.map((link, ind) => {
+      if (ind === i) {
+        link.isActive = true;
+      } else {
+        link.isActive = false;
+      }
+      return link;
+    });
+    setNavItems(navLinksActive);
+  };
+
   return (
     <TopbarW $bgColor={bgColor}>
       <TopbarLogoW onClick={onLogo}>{logo}</TopbarLogoW>
       <TopbarLinksW>
-        {(navitems || defaultItems).map((item, i) => {
+        {(navItems || defaultItems).map((item, i) => {
           return (
-            <TopbarLink key={i} $linksColor={linksColor} onClick={item.onClick}>
+            <TopbarLink
+              key={i}
+              $linksColor={linksColor}
+              onClick={() => setActiveLink(item.onClick, item.route, i)}
+              $isActive={item.isActive}
+            >
               {item.title}
             </TopbarLink>
           );

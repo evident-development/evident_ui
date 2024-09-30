@@ -13,5 +13,7 @@ export interface ITopbarProps {
 }
 export interface NavItem {
   title: string;
-  onClick?: (event?: React.SyntheticEvent<HTMLElement>) => void;
+  onClick?: (route?: string, p?: number) => void;
+  isActive?: boolean;
+  route?: string;
 }

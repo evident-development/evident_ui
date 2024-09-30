@@ -37,8 +37,13 @@ export const TopbarLinksW = styled.ul`
   margin: 0;
 `;
 
-export const TopbarLink = styled.li<{ $linksColor?: string }>`
+interface ITopbarLink {
+  $linksColor?: string;
+  $isActive: boolean;
+}
+export const TopbarLink = styled.li<ITopbarLink>`
   color: ${({ $linksColor }) => $linksColor || "#ffffff"};
+  font-weight: ${({ $isActive }) => ($isActive ? "700" : "unset")};
   cursor: pointer;
   user-select: none;
   &:hover {
