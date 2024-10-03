@@ -8,7 +8,7 @@ export interface ITopbarProps {
   isSearchPanel?: boolean;
   searchPlaceHolder?: string;
   onSearch?: (event?: React.SyntheticEvent<HTMLElement>) => void;
-  linksColor?: string;
+  blured?: boolean;
   onLogo?: (event?: React.SyntheticEvent<HTMLElement>) => void;
 }
 export interface NavItem {

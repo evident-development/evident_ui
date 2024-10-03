@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface ILeftBarItem {
   $isActive: boolean;
@@ -10,11 +10,12 @@ export const LeftBarItem = styled.li<ILeftBarItem>`
   box-sizing: border-box;
   color: #2e3236;
   &:hover {
-    color: ${({ $isActive }) => ($isActive ? '' : 'blueviolet')};
+    color: ${({ $isActive }) => ($isActive ? "" : "blueviolet")};
     cursor: pointer;
     border-radius: 2px;
   }
   background-color: ${({ $isActive }) =>
-    $isActive ? '#d6d9dc' : 'transparent'};
+    $isActive ? "#d6d9dc" : "transparent"};
   transition: all ease 0.5s;
+  margin-top: 4px;
 `;

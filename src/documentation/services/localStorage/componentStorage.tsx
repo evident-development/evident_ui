@@ -374,6 +374,14 @@ const ComponentCard: IComponentsData = {
       component: EComponentsGroupId.Navigation,
     },
   ],
+  cards: [
+    {
+      example: "plaincard",
+      tableData: [],
+      code: "some code",
+      component: EComponentsGroupId.Cards,
+    },
+  ],
 };
 
 export const getComponentsInfo = (key: EComponentsGroupId) => {
@@ -449,6 +457,8 @@ export const getComponentdata = (key: EComponentsGroupId) => {
           isSignPanel: true,
         },
       ];
+    case EComponentsGroupId.Cards:
+      return [{ id: "sjdhjks" }];
     default:
       return [];
   }

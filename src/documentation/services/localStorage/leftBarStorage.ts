@@ -40,5 +40,13 @@ export const leftBarStorage = (
       },
       isActive: EComponentsGroupId.Navigation === componentsGroupId,
     },
+    {
+      id: "cards",
+      label: "Cards",
+      onClick(e: SyntheticEvent) {
+        setComponentsGroupId(e.currentTarget.id as EComponentsGroupId);
+      },
+      isActive: EComponentsGroupId.Cards === componentsGroupId,
+    },
   ];
 };

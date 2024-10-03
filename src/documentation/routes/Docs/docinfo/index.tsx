@@ -47,6 +47,8 @@ export const DocInfo = () => {
                         isSignPanel={cmp.isSignPanel}
                       />
                     );
+                  case EComponentsGroupId.Cards:
+                    return <div>Hello world</div>;
                   default:
                     return <></>;
                 }

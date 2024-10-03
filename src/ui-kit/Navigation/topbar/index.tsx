@@ -42,7 +42,7 @@ export const Topbar: FC<ITopbarProps> = (props) => {
     isSearchPanel,
     searchPlaceHolder,
     onSearch,
-    linksColor,
+    blured,
     onLogo,
   } = props;
 
@@ -62,7 +62,7 @@ export const Topbar: FC<ITopbarProps> = (props) => {
   };
 
   return (
-    <TopbarW $bgColor={bgColor}>
+    <TopbarW $bgColor={bgColor} $blured={blured}>
       <TopbarLogoW onClick={onLogo}>{logo}</TopbarLogoW>
       <TopbarLinksW>
         {(navItems || defaultItems).map((item, i) => {

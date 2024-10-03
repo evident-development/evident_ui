@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { isStyledComponent } from "styled-components";
 
 export interface ITopbarW {
   $bgColor: string;
+  $blured: boolean;
 }
 
 export const TopbarW = styled.nav<ITopbarW>`
@@ -10,11 +11,17 @@ export const TopbarW = styled.nav<ITopbarW>`
   justify-content: space-around;
   height: 64px;
   width: 100%;
-  background-color: ${({ $bgColor }) => $bgColor || "#173f80"};
+  background-color: ${({ $bgColor, $blured }) => {
+    if ($blured) {
+      return ($bgColor || "#173f80") + "BF";
+    }
+    return $bgColor || "#173f80";
+  }};
   color: #ffffff;
   position: sticky;
   top: 0px;
   z-index: 5;
+  backdrop-filter: blur(5px);
 `;
 
 export const TopbarLogoW = styled.div`

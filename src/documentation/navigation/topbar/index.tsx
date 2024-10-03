@@ -24,7 +24,7 @@ export const TopBar = () => {
 
   return (
     <HeaderW $gridArea={"topbar"}>
-      <Topbar navitems={navLinks} />
+      <Topbar navitems={navLinks} blured />
     </HeaderW>
   );
 };
