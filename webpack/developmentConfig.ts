@@ -1,5 +1,7 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { Configuration } from "webpack";
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+
 import "webpack-dev-server";
 
 export const developmentConfig = (
@@ -11,6 +13,7 @@ export const developmentConfig = (
       new HtmlWebpackPlugin({
         template: templateSource,
       }),
+      new ReactRefreshWebpackPlugin(),
     ],
     devServer: {
       port: 7000,
