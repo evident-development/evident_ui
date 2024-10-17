@@ -9,10 +9,10 @@ export const About = () => {
   return (
     <AboutW>
       <AboutAdW>
-        <AboutAdTextW $fontSize={32} $color={"#fc4e03"}>
+        <AboutAdTextW $fontSize={32} $color={"#c5d3ff"}>
           simple
         </AboutAdTextW>
-        <AboutAdTextW $fontSize={34} $color={"#fcba03"}>
+        <AboutAdTextW $fontSize={34} $color={"#8fa8f9"}>
           beautiful
         </AboutAdTextW>
         <AboutAdTextW $fontSize={36} $color={"#3041fc"}>
@@ -27,7 +27,7 @@ export const About = () => {
         <AboutAdTextW $fontSize={42} $color={"#505487"}>
           expandable
         </AboutAdTextW>
-        <AboutAdTextW $fontSize={70} $color={"#000000"}>
+        <AboutAdTextW $fontSize={70} $color={"#6386f2"}>
           evident
         </AboutAdTextW>
       </AboutAdW>

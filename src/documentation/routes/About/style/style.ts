@@ -8,13 +8,14 @@ export const AboutW = styled.div`
 
 export const AboutAdW = styled.div`
   border: 1px solid black;
-  height: 400px;
+  height: 336px;
   width: 400px;
   padding: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
   flex-direction: column;
+  box-shadow: 22px 21px 0px rgba(0, 0, 0, 0.2);
 `;
 
 interface IAboutAdTextWProps {
