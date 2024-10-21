@@ -2,6 +2,7 @@ import { ExampleSections, DocInfoW } from "./style";
 import { ComponentW } from "./style";
 import {
   Button,
+  Card,
   IBtnKind,
   IBtnLook,
   IBtnSize,
@@ -48,7 +49,40 @@ export const DocInfo = () => {
                       />
                     );
                   case EComponentsGroupId.Cards:
-                    return <div>Hello world</div>;
+                    return (
+                      <Card
+                        key={cmp.id}
+                        header="Card Header"
+                        subHeader="Card sub-header"
+                        body={
+                          <div>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Nemo culpa perspiciatis hic itaque, totam
+                            nobis delectus obcaecati. Quas, deleniti.
+                            Perferendis odio perspiciatis quos obcaecati rerum
+                            amet est totam voluptatum laborum.
+                          </div>
+                        }
+                        footer={
+                          <>
+                            <Button
+                              label={"Card Button"}
+                              size={"big"}
+                              kind={"danger"}
+                              look={"withborder"}
+                              id={"cardbtn1"}
+                            />
+                            <Button
+                              label={"Card Button"}
+                              size={"big"}
+                              kind={"default"}
+                              look={"withborder"}
+                              id={"cardbtn2"}
+                            />
+                          </>
+                        }
+                      />
+                    );
                   default:
                     return <></>;
                 }
