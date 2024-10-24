@@ -141,6 +141,7 @@ const ComponentCard: IComponentsData = {
       example: "input",
       tableData: [],
       code: "some code",
+      component: EComponentsGroupId.Inputs,
     },
   ],
   navigation: [
@@ -458,7 +459,8 @@ export const getComponentdata = (key: EComponentsGroupId) => {
         },
       ];
     case EComponentsGroupId.Cards:
-      return [{ id: "sjdhjks" }];
+    case EComponentsGroupId.Inputs:
+      return [{ id: "sjehjis" }];
     default:
       return [];
   }

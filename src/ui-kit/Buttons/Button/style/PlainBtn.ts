@@ -102,4 +102,5 @@ export const DefaultView = styled.button<IBtnStyleProps>`
     opacity: 1;
     cursor: pointer;
   }
+  width: ${({ $stretched }) => ($stretched ? "100%" : "auto")};
 `;

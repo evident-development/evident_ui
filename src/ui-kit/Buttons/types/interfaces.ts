@@ -7,10 +7,13 @@ export interface IBtnProps {
   kind: IBtnKind;
   look: IBtnLook;
   id: string;
+  className?: string;
+  stretched?: boolean;
 }
 
 export interface IBtnStyleProps {
   $size?: IBtnSize;
   $kind?: IBtnKind;
   $look?: IBtnLook;
+  $stretched?: boolean;
 }

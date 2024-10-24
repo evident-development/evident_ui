@@ -1,9 +1,10 @@
 import { FC } from "react";
 import { Textonly, DefaultView } from "./style";
 import { IBtnProps } from "../types";
+import classNames from "classnames";
 
 export const Button: FC<IBtnProps> = (props) => {
-  const { label, size, look, onClick, id, kind } = props;
+  const { label, size, look, onClick, id, kind, className, stretched } = props;
   switch (look) {
     case "withborder":
       return (
@@ -12,6 +13,8 @@ export const Button: FC<IBtnProps> = (props) => {
           id={id}
           $size={size}
           $kind={kind ?? "default"}
+          className={className}
+          $stretched={stretched}
         >
           {label}
         </DefaultView>
@@ -23,6 +26,7 @@ export const Button: FC<IBtnProps> = (props) => {
           id={id}
           $size={size}
           $kind={kind ?? "default"}
+          className={className}
         >
           {label}
         </Textonly>

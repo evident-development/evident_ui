@@ -9,9 +9,9 @@ export const Card: FC<ICardProps> = (props) => {
     <CardW>
       <CardH>{header}</CardH>
       <CardSubH>{subHeader}</CardSubH>
-      <Divider />
+      {/* <Divider /> */}
       <CardB>{body}</CardB>
-      <Divider />
+      {/* <Divider /> */}
       <CardF>{footer}</CardF>
     </CardW>
   );

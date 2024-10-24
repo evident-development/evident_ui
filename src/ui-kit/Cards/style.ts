@@ -13,9 +13,11 @@ export const CardH = styled.h3`
   padding: 0;
   margin: 0;
   color: #333333;
+  font-size: 16px;
 `;
 export const CardSubH = styled.span`
   color: #545454;
+  font-size: 13px;
 `;
 export const CardB = styled.div``;
 export const CardF = styled.footer`
